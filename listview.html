@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Site</title>
+    <link rel="stylesheet" href="listview.css" />
+    <script src="script.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar-top">
+      <div class="brand">
+        <img src="images/logo-colored.png" alt="Logo" class="logo" />
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search" class="search-input" />
+        <select class="category-select">
+          <option>All category</option>
+          <option>Hot offers</option>
+          <option>Gift boxes</option>
+          <option>Projects</option>
+          <option>Menu item</option>
+          <option>Help</option>
+        </select>
+        <button class="search-button">Search</button>
+      </div>
+      <ul class="user-icons">
+        <li><i class="fa-regular fa-user"></i><span>Profile</span></li>
+        <li><i class="fa-regular fa-message"></i><span>Message</span></li>
+        <li><i class="fa-regular fa-heart"></i><span>Orders</span></li>
+        <li><i class="fa-solid fa-cart-shopping"></i><span>My cart</span></li>
+      </ul>
+    </nav>
+
+    <nav class="navbar-bottom">
+      <ul class="category-menu">
+        <li><i class="fa-solid fa-bars"></i> All category</li>
+        <li>Hot offers</li>
+        <li>Gift boxes</li>
+        <li>Projects</li>
+        <li>Menu item</li>
+        <li>
+          Help <i class="fa-solid fa-chevron-down"></i>
+        </li>
+      </ul>
+      <div class="language-shipping">
+        <select class="language-select">
+          <option>English, USD</option>
+          <option>Spanish, EUR</option>
+          <option>French, EUR</option>
+        </select>
+
+        <div class="custom-shipping-dropdown">
+          <button class="dropdown-toggle" id="shippingDropdown" aria-haspopup="listbox" aria-expanded="false">
+            <img src="images/flag-US.png" alt="US" class="flag-icon" />
+            <span class="selected-country">Ship to United States</span>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <ul class="dropdown-menu" role="listbox" aria-labelledby="shippingDropdown">
+            <li role="option" tabindex="0" data-country="AE">
+            <img src="images/flag-AE.png" alt="AE" class="flag-icon" />
+              <span>Ship to United Arab Emirates</span>
+            </li>
+            <li role="option" tabindex="0" data-country="AU">
+              <img src="images/Property 1=AU.png" alt="AU" class="flag-icon" />
+              <span>Ship to Australia</span>
+            </li>
+            <li role="option" tabindex="0" data-country="CN">
+              <img src="images/Property 1=CN.png" alt="CN" class="flag-icon" />
+              <span>Ship to China</span>
+            </li>
+            <li role="option" tabindex="0" data-country="DE">
+              <img src="images/Property 1=DE.png" alt="DE" class="flag-icon" />
+              <span>Ship to Germany</span>
+            </li>
+            <li role="option" tabindex="0" data-country="DK">
+              <img src="images/Property 1=DK.png" alt="DK" class="flag-icon" />
+              <span>Ship to Denmark</span>
+            </li>
+            <li role="option" tabindex="0" data-country="FR">
+              <img src="images/Property 1=FR.png" alt="FR" class="flag-icon" />
+              <span>Ship to France</span>
+            </li>
+            <li role="option" tabindex="0" data-country="GB">
+              <img src="images/Property 1=GB.png" alt="GB" class="flag-icon" />
+              <span>Ship to United Kingdom</span>
+            </li>
+            <li role="option" tabindex="0" data-country="IT">
+              <img src="images/Property 1=IT.png" alt="IT" class="flag-icon" />
+              <span>Ship to Italy</span>
+            </li>
+            <li role="option" tabindex="0" data-country="RU">
+              <img src="images/Property 1=RU.png" alt="RU" class="flag-icon" />
+              <span>Ship to Russia</span>
+            </li>
+            <li role="option" tabindex="0" data-country="US">
+              <img src="images/Property 1=US.png" alt="US" class="flag-icon" />
+              <span>Ship to United States</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+  </header>
+
+<!-- Product List View Section -->
+<main class="listview-section">
+    <aside class="filters-sidebar">
+    <div class="filter-group">
+      <h3>Category</h3>
+      <ul class="category-list">
+        <li><input type="checkbox" id="cat-mobile" /><label for="cat-mobile">Mobile accessory</label></li>
+        <li><input type="checkbox" id="cat-electronics" /><label for="cat-electronics">Electronics</label></li>
+        <li><input type="checkbox" id="cat-smartphones" /><label for="cat-smartphones">Smartphones</label></li>
+        <li><input type="checkbox" id="cat-modern-tech" /><label for="cat-modern-tech">Modern tech</label></li>
+        <li><a href="#" class="see-all">See all</a></li>
+      </ul>
+    </div>
+    <div class="filter-group">
+      <h3>Brands</h3>
+      <ul class="brand-list">
+        <li><input type="checkbox" id="brand-samsung" /><label for="brand-samsung">Samsung</label></li>
+        <li><input type="checkbox" id="brand-apple" /><label for="brand-apple">Apple</label></li>
+        <li><input type="checkbox" id="brand-huawei" /><label for="brand-huawei">Huawei</label></li>
+        <li><input type="checkbox" id="brand-pocco" /><label for="brand-pocco">Pocco</label></li>
+        <li><input type="checkbox" id="brand-lenovo" /><label for="brand-lenovo">Lenovo</label></li>
+        <li><a href="#" class="see-all">See all</a></li>
+      </ul>
+    </div>
+    <div class="filter-group">
+      <h3>Features</h3>
+      <ul class="features-list">
+        <li><input type="checkbox" id="feature-metallic" /><label for="feature-metallic">Metallic</label></li>
+        <li><input type="checkbox" id="feature-plastic" /><label for="feature-plastic">Plastic cover</label></li>
+        <li><input type="checkbox" id="feature-8gb" /><label for="feature-8gb">8GB Ram</label></li>
+        <li><input type="checkbox" id="feature-super" /><label for="feature-super">Super memory</label></li>
+        <li><input type="checkbox" id="feature-large" /><label for="feature-large">Large Memory</label></li>
+        <li><a href="#" class="see-all">See all</a></li>
+      </ul>
+    </div>
+
+    <div class="filter-group">
+      <h3>Price range</h3>
+      <div class="price-range-slider">
+        <input type="range" id="minRange" min="0" max="999999" value="0" />
+        <input type="range" id="maxRange" min="0" max="999999" value="999999" />
+      </div>
+      <div class="price-inputs">
+        <div>
+          <label for="minPrice">Min</label>
+          <input type="number" id="minPrice" value="0" min="0" max="999999" />
+        </div>
+        <div>
+          <label for="maxPrice">Max</label>
+          <input type="number" id="maxPrice" value="999999" min="0" max="999999" />
+        </div>
+      </div>
+      <button id="applyPrice" class="apply-button">Apply</button>
+    </div>
+
+    <div class="filter-group">
+      <h3>Condition</h3>
+      <div class="condition-options">
+        <label><input type="radio" name="condition" value="any" checked /> Any</label>
+        <label><input type="radio" name="condition" value="refurbished" /> Refurbished</label>
+        <label><input type="radio" name="condition" value="brand-new" /> Brand new</label>
+        <label><input type="radio" name="condition" value="old-items" /> Old items</label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Ratings</h3>
+      <div class="ratings-options">
+        <label><input type="checkbox" name="rating" value="5" /> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+        <label><input type="checkbox" name="rating" value="4" /> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></label>
+        <label><input type="checkbox" name="rating" value="3" /> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></label>
+        <label><input type="checkbox" name="rating" value="2" /> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i></label>
+      </div>
+    </div>
+  </aside>
+  <section class="product-list">
+    <div class="product-card">
+      <img src="images/mobile1.png" alt="Canon Camera EOS 2000" />
+      <div class="product-info">
+        <h4>Canon Camera EOS 2000, Black 10x zoom</h4>
+        <div class="price-rating">
+          <span class="price">$998.00 <del>$128.00</del></span>
+          <span class="rating"><i class="fas fa-star"></i> 7.5</span>
+        </div>
+        <div class="orders-shipping">
+          <span>154 orders</span>
+          <span class="free-shipping">Free Shipping</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="view-details">View details</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/mobile.png" alt="GoPro HERO6 4K Action Camera - Black" />
+      <div class="product-info">
+        <h4>GoPro HERO6 4K Action Camera - Black</h4>
+        <div class="price-rating">
+          <span class="price">$998.00</span>
+          <span class="rating"><i class="fas fa-star"></i> 7.5</span>
+        </div>
+        <div class="orders-shipping">
+          <span>154 orders</span>
+          <span class="free-shipping">Free Shipping</span>
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+        <a href="#" class="view-details">View details</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/laptop.png" alt="GoPro HERO6 4K Action Camera - Black" />
+      <div class="product-info">
+        <h4>GoPro HERO6 4K Action Camera - Black</h4>
+        <div class="price-rating">
+          <span class="price">$998.00</span>
+          <span class="rating"><i class="fas fa-star"></i> 7.5</span>
+        </div>
+        <div class="orders-shipping">
+          <span>154 orders</span>
+          <span class="free-shipping">Free Shipping</span>
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+        <a href="#" class="view-details">View details</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/watch.png" alt="GoPro HERO6 4K Action Camera - Black" />
+      <div class="product-info">
+        <h4>GoPro HERO6 4K Action Camera - Black</h4>
+        <div class="price-rating">
+          <span class="price">$998.00</span>
+          <del>$1128.00</del>
+          <span class="rating"><i class="fas fa-star"></i> 7.5</span>
+        </div>
+        <div class="orders-shipping">
+          <span>154 orders</span>
+          <span class="free-shipping">Free Shipping</span>
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+        <a href="#" class="view-details">View details</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/headphones.png" alt="GoPro HERO6 4K Action Camera - Black" />
+      <div class="product-info">
+        <h4>GoPro HERO6 4K Action Camera - Black</h4>
+        <div class="price-rating">
+          <span class="price">$998.00</span>
+          <span class="rating"><i class="fas fa-star"></i> 7.5</span>
+        </div>
+        <div class="orders-shipping">
+          <span>154 orders</span>
+          <span class="free-shipping">Free Shipping</span>
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+        <a href="#" class="view-details">View details</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Newsletter Subscription Section -->
+<section class="newsletter-subscription">
+  <h3>Subscribe on our newsletter</h3>
+  <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+  <form class="newsletter-form" action="#" method="post">
+    <input type="email" placeholder="Email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="brand-icon">Brand</div>
+      <p>Best information about the company goes here but now lorem ipsum is</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Find store</a>
+        <a href="#">Categories</a>
+        <a href="#">Blogs</a>
+      </div>
+      <div class="footer-column">
+        <h4>Partnership</h4>
+        <a href="#">About Us</a>
+        <a href="#">Find store</a>
+        <a href="#">Blogs</a>
+      </div>
+      <div class="footer-column">
+        <h4>Information</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Money Refund</a>
+        <a href="#">Shipping</a>
+        <a href="#">Contact us</a>
+      </div>
+      <div class="footer-column">
+        <h4>For users</h4>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <a href="#">Settings</a>
+        <a href="#">My Orders</a>
+      </div>
+      <div class="footer-column get-app">
+        <h4>Get app</h4>
+        <a href="#" class="app-store-btn" aria-label="Download on the App Store">
+          <img src="images/app-store.png" alt="App Store" />
+        </a>
+        <a href="#" class="google-play-btn" aria-label="Get it on Google Play">
+          <img src="images/google-play.png" alt="Google Play" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2023 Ecommerce.</p>
+    <div class="footer-language-dropdown custom-footer-dropdown">
+      <button class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+        <img src="images/flag-US.png" alt="US" class="flag-icon" />
+        <span class="selected-language">English</span>
+        <i class="fa-solid fa-chevron-up dropdown-arrow"></i>
+      </button>
+      <ul class="dropdown-menu" role="listbox">
+        <li role="option" tabindex="0" data-language="English">
+          <img src="images/flag-US.png" alt="US" class="flag-icon" />
+          <span>English</span>
+        </li>
+        <li role="option" tabindex="0" data-language="Spanish">
+          <img src="images/flag-AE.png" alt="AE" class="flag-icon" />
+          <span>Spanish</span>
+        </li>
+        <li role="option" tabindex="0" data-language="French">
+          <img src="images/flag-FR.png" alt="FR" class="flag-icon" />
+          <span>French</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
